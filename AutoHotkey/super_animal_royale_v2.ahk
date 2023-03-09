@@ -1,6 +1,6 @@
 ﻿#Requires AutoHotkey v2.0
 #MaxThreadsPerHotkey 3
-#SingleInstance
+#SingleInstance Ignore
 
 SendMode InputThenPlay
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -9,84 +9,82 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 F12::ExitApp ; Exit script
 NumLock::Suspend
 
+$c::jump_c
+$v::jump_v
+$Space::jump
+$b::jump_b
+
 ; $ so the sent key does not retrigger the script
-$c:: 
-	While ( GetKeyState( "c","P" ) ) {
-		Send, {c down}
+jump_c(){
+    While(GetKeyState("c", "P")) {
+		Send c down
 
-		Random, ranSleep, 1, 5
-		Sleep, %ranSleep%
+		Sleep Random(1, 5)
 
-		Send, {Space Down}
-
-		; 399 is minimum here
-		Random, ranSleep, 399, 436
-		Sleep, %ranSleep%
-
-		Send, {c Up}
-
-		Random, ranSleep, 4, 11
-		Sleep, %ranSleep%
-
-		Send, {Space Up}
-	}
-Return
-
-$v:: 
-	While ( GetKeyState( "v","P" ) ) {
-		Send, {v down}
-
-		Random, ranSleep, 1, 5
-		Sleep, %ranSleep%
-
-		Send, {Space Down}
+		Send Space Down
 
 		; 399 is minimum here
-		Random, ranSleep, 399, 436
-		Sleep, %ranSleep%
+		Sleep Random(399, 436)
 
-		Send, {v Up}
+		Send c Up
 
-		Random, ranSleep, 4, 11
-		Sleep, %ranSleep%
+		Sleep Random(4, 11)
 
-		Send, {Space Up}
+		Send Space Up
 	}
-Return
+    Return
+}
 
-$b:: 
-	While ( GetKeyState( "b","P" ) ) {
-		Send, {b down}
+jump_v(){
+	While(GetKeyState("v", "P")) {
+		Send v down
 
-		Random, ranSleep, 1, 5
-		Sleep, %ranSleep%
+		Sleep Random(1, 5)
 
-		Send, {Space Down}
+		Send Space Down
 
 		; 399 is minimum here
-		Random, ranSleep, 399, 436
-		Sleep, %ranSleep%
+		Sleep Random(399, 436)
 
-		Send, {b Up}
+		Send v Up
 
-		Random, ranSleep, 4, 11
-		Sleep, %ranSleep%
+		Sleep Random(4, 11)
 
-		Send, {Space Up}
+		Send Space Up
 	}
-Return
+    Return
+}
 
-$Space:: 
-	While ( GetKeyState( "space","P" ) ) {
-		Send, {Space Down}
+jump_b(){
+	While (GetKeyState("b", "P")) {
+		Send b down
 
-		Random, ranSleep, 20, 25
-		Sleep, %ranSleep%
+		Sleep Random(1, 5)
 
-		Send, {Space Up}
+		Send Space Down
 
 		; 399 is minimum here
-		Random, ranSleep, 399, 436
-		Sleep, %ranSleep%
+		Sleep Random(399, 436)
+
+		Send b Up
+
+		Sleep Random(4, 11)
+
+		Send Space Up
 	}
-Return
+    Return
+}
+
+jump(){
+	While (GetKeyState("space", "P")) {
+		Send Space Down
+
+		Sleep Random(20, 25)
+
+		Send Space Up
+
+		; 399 is minimum here
+		Sleep Random(399, 436)
+	}
+    Return
+}
