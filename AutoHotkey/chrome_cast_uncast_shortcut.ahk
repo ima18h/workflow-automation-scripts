@@ -8,7 +8,7 @@ SetWorkingDir A_InitialWorkingDir  ; Ensures a consistent starting directory.
 +Insert::playPuaseYT
 
 
-delay_1 := 128, delay_2 := 256, delay_3 := 512, delay_4 := 1024, delay_5 := 2048, delay_6 := 4096
+delay_1 := 128, delay_2 := 256, delay_3 := 512, delay_4 := 1024, delay_5 := 2048, delay_6 := 4096, delay_7 := 8192
 
 start(){
     global chromeWin := WinExist(chromeWin)
@@ -81,7 +81,7 @@ activateChromeYT(startup := false){
             Send "^1"
             Sleep delay_5
             Send "^r"
-            Sleep delay_6
+            Sleep delay_7
         }
         else{
             WinActivate(chromeWin)
@@ -89,7 +89,7 @@ activateChromeYT(startup := false){
             Send "^1"
             Sleep delay_5
             Send "^r"
-            Sleep delay_6
+            Sleep delay_7
         }
     }
     else
@@ -99,7 +99,7 @@ activateChromeYT(startup := false){
             Send "k"
             Sleep delay_1
             Send "{esc}"
-            Sleep delay_3
+            Sleep delay_4
         }
         else{
             WinActivate(chromeWin)
@@ -109,7 +109,7 @@ activateChromeYT(startup := false){
             Send "k"
             Sleep delay_1
             Send "{esc}"
-            Sleep delay_3
+            Sleep delay_4
         }
 }
 
