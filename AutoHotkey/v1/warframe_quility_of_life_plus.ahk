@@ -25,7 +25,7 @@ Pause::Suspend
 Return
 
 
-
+; $ so the sent key does not retrigger the script
 $q:: 
 	While ( GetKeyState( "q","P" ) ) {
 		Send, {q down}
