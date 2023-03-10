@@ -6,7 +6,7 @@ SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 #MaxThreadsPerHotkey 3
 #SingleInstance
 
-F12::ExitApp ; Exit script with Escape key
+F12::ExitApp
 NumLock::Suspend
 
 

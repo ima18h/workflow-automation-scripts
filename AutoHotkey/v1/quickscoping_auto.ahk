@@ -6,7 +6,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance force
 
 
-F12::ExitApp  ; Exit script with Escape key
+F12::ExitApp
 F11::Reload
 Pause::Suspend
 
