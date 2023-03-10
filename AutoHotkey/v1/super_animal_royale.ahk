@@ -6,9 +6,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #MaxThreadsPerHotkey 3
 #SingleInstance
 
-F12::ExitApp ; Exit script with Escape key
+F12::ExitApp
 NumLock::Suspend
 
+; $ so the sent key does not retrigger the script
 $c:: 
 	While ( GetKeyState( "c","P" ) ) {
 		Send, {c down}
