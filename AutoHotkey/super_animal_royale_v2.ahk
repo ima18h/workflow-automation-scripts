@@ -2,8 +2,6 @@
 #MaxThreadsPerHotkey 3
 #SingleInstance Ignore
 
-SendMode "InputThenPlay"
-
 
 F12::ExitApp ; Exit script
 NumLock::Suspend

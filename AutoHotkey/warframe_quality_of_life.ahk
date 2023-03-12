@@ -1,6 +1,5 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Ignore
-SendMode "InputThenPlay"
 
 
 F12::ExitApp
