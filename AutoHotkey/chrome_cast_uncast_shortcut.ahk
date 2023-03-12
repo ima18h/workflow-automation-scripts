@@ -1,5 +1,4 @@
 ﻿#Requires AutoHotkey v2.0
-SetWorkingDir A_InitialWorkingDir  ; Ensures a consistent starting directory.
 
 
 ; Script to start/stop casting screen to Chromecast
