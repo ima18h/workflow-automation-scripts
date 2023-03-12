@@ -1,7 +1,4 @@
-﻿#Requires AutoHotkey v2.0
-
-
-; Script to start/stop casting screen to Chromecast
+﻿; Script to start/stop casting screen to Chromecast
 +Home::start
 +End::stop
 +Insert::playPuaseYT
